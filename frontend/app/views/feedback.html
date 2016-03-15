@@ -1,0 +1,56 @@
+<div ng-controller="FeedbackCtrl">
+
+
+    <div class="container" id="loadingpanel1">
+        <div class="row">
+
+            <div class="loading" ng-show="!contentLoaded">
+            </div>
+            <div class="row-right">
+                <div class="form-group">
+                    <input type="text" name="search" ng-model="search" class="form-control" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+
+                <div class="table-responsive">
+
+
+                    <table ng-show="contentLoaded" id="mytable" class="table table-bordred table-striped">
+
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Rating</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in feedback | filter: search | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage track by $index">
+                                <td>{{item.name}}</td>
+                                <td>{{item.email}}</td>
+                                <td>{{item.rating}}</td>
+                                <td>{{item.comments}}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <ul ng-show="contentLoaded" class="pagination center-block">
+                        <li><a href="" ng-click="pagination.prevPage()">Previous</a></li>
+
+                        <li><a href="" ng-click="pagination.nextPage()">Next</a></li>
+                    </ul>
+                    <!--<button ng-if="feedback.length > totalDisplayed" class="btn" ng-click="loadMore(totalDisplayed)">Load more</button>-->
+                </div>
+
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+
+
+<hr>

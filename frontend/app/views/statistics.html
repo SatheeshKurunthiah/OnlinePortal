@@ -1,0 +1,88 @@
+<h2 class="inset">Registered users for maXTouch Studio</h2>
+
+<div ng-controller="LicenseCountCtrl">
+
+    <div class="container">
+        <div class="loading" ng-show="!contentLoaded">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" ng-show="contentLoaded">
+                    <div id="donut-example" style="height: 350px;"></div>
+                </div>
+            </div>
+            </br>
+
+            <div ng-show="contentLoaded" class="center-block">
+                <ul class="list-inline">
+                    <li>Chart</li>
+                    <li>
+
+                        <div class="material-switch">
+                            <input id="chart" ng-model="chartType" ng-change="stateChanged(chartType)" type="checkbox" />
+                            <label for="chart" class="label-info"></label>
+                        </div>
+
+
+                    </li>
+                    <li>Table</li>
+                </ul>
+
+
+            </div>
+
+
+            <div ng-if="showChart == true" class="row" ng-show="contentLoaded">
+                <h2 ng-show="contentLoaded" class="inset">Top 10 External Customers</h2>
+                <div class="col-md-6">
+                    <div id="bar-example" style="height: 350px;"></div>
+                </div>
+            </div>
+
+            </br>
+            <div ng-if="showChart == false" class="fixedContainer">
+                <div class="row-right">
+                    <div class="form-group">
+                        <input type="text" name="search" ng-model="search" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table ng-show="contentLoaded" id="mytable" class="table table-bordred table-striped">
+
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Company Name</th>
+                                    <th>Registered Users</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in statistics | filter: search | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage track by $index">
+                                    <td>{{item.no}}</td>
+                                    <td>{{item.company}}</td>
+                                    <td>{{item.users}}</td>
+                                    <td>{{item.percentage}}</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <!--<button ng-click="pagination.prevPage()" class="btn" ng-hide="pagination.page == 0">Previous</button>-->
+                        <ul ng-show="contentLoaded" class="pagination center-block">
+                            <li><a href="" ng-click="pagination.prevPage()">Previous</a></li>
+                            <!--<li ng-repeat="n in [] | range: pagination.numPages" ng-class="{active: n == pagination.page}">
+                                <a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
+                            </li>-->
+                            <li><a href="" ng-click="pagination.nextPage()">Next</a></li>
+                        </ul>
+                        <!--<button ng-click="pagination.nextPage()" class="btn" ng-hide="pagination.page + 1 >= pagination.numPages">Next</button>-->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

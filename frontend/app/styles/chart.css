@@ -1,0 +1,158 @@
+.morris-hover {
+    position: absolute;
+    z-index: 1000
+}
+.morris-hover.morris-default-style {
+    border-radius: 10px;
+    padding: 6px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    border: solid 2px rgba(230, 230, 230, 0.8);
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center
+}
+.morris-hover.morris-default-style .morris-hover-row-label {
+    font-weight: bold;
+    margin: 0.25em 0
+}
+.morris-hover.morris-default-style .morris-hover-point {
+    white-space: nowrap;
+    margin: 0.1em 0
+}
+.verticalChart {
+    width: 100%;
+}
+.verticalChart .singleBar {
+    width: 10%;
+    float: left;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+.verticalChart .singleBar .bar {
+    position: relative;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+.verticalChart .singleBar .bar .value {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    color: #fff;
+}
+.verticalChart .singleBar .bar .value span {
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    color: #ddd;
+    text-shadow: 0px -1px 0px #fff, 0px 1px 0px #fff, 1px 0px 0px #fff, -1px 0px 0px #fff, -1px -1px 0px #fff, -1px 1px 0px #fff, 1px 1px 0px #fff, 1px -1px 0px #fff;
+    display: none;
+    text-align: center;
+}
+.verticalChart .singleBar .title {
+    margin-top: 5px;
+    text-align: center;
+}
+.widget {
+    padding: 10px;
+    margin-bottom: 28px;
+    width: 100%;
+}
+.blue,
+.blue [class="box-header"],
+.blue.box,
+.slider.blue .ui-slider-range,
+.progress.blue .ui-progressbar-value,
+.sliderVertical.blue .ui-slider-range,
+.progressSlim.blue .ui-progressbar-value,
+.label-info,
+.badge-info {
+    width: 75%;
+    background: #578EBE !important;
+    border-color: #578EBE !important;
+    color: #fff;
+}
+.material-switch > input[type="checkbox"] {
+    display: none;
+}
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 40px;
+}
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position: absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+.inset h4 {
+    color: #444444;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}
+.inset h2 {
+    color: #444444;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}
+.inset h1 {
+    color: #444444;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}
+.inset p {
+    background: #CCCCCC;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/73/7c/df/737cdf1d697638a09d934656421bc92c.gif') no-repeat left center;
+}
+.fixedContainer {
+    height: 600px;
+    overflow: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+.animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+.stars {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #d17581;
+}
